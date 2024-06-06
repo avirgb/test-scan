@@ -29,13 +29,7 @@
         let scanner = new Instascan.Scanner({video:document.getElementById('preview')});
         Instascan.Camera.getCameras().then(function (cameras){
             if (cameras.length > 0) {
-                scanner.start(cameras[0]);
-                $.each(cameras, (i, b) => {
-                    if (c.name.indexOf('back') != -1) {
-                    selectedCam = b;
-                    return false;
-                    }
-                });
+                scanner.start(cameras[2]);
             }else{
                 alert('No Camera');
             }
